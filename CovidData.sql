@@ -78,7 +78,7 @@ where dea.continent is not null
 Select *,(rolling_vaccines/population)*100
 FROM PopvsVac
 
---Create View For Visuaization
+--Create View For Visualization
 
 CREATE View PopvsVac as
 SELECT dea.continent,dea.location ,dea.date,dea.population,vac.new_vaccinations,SUM(CAST(vac.new_vaccinations as int)) OVER(PARTITION BY dea.location Order by dea.location,dea.date) as rolling_vaccines
