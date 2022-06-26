@@ -3,8 +3,8 @@ FROM PPP_Project1.dbo.CovidDeaths$
 WHERE continent is not null
 order by 4,3
 
---SELECT* FROM PPP_Project1.dbo.CovidVaccinations$
---order by 3,4
+SELECT* FROM PPP_Project1.dbo.CovidVaccinations$
+order by 3,4
 
 --Death Percentage In Nigeria
 SELECT location,date,total_cases,total_deaths,population,(total_deaths/total_cases)*100 AS Death_Percentage
